@@ -1,16 +1,26 @@
-//1安装protoc :
+//1安装protoc (极度耗时):
+
 sudo apt-get install autoconf automake libtool curl make g++ unzip
+
 git clone https://github.com/google/protobuf.git
+
 cd protobuf
+
 git submodule update --init --recursive
+
 ./autogen.sh
+
 ./configure
+
 make
+
 make check
+
 sudo make install
+
 sudo ldconfig
 
-//2安装protoc 可以直接下载编译好的二进制程序,放入 GOPATH/bin
+//2安装protoc(极快) 可以直接下载编译好的二进制程序,放入 GOPATH/bin
 
 //安装go插件
 //获取proto包
