@@ -1,0 +1,9 @@
+可能原因: 
+### 1 docker内存占用过高,被linux 结束
+启动docker与容器, 查看容器状态  systemctl status docker -l
+容器状态正常, 内存占用极低
+
+### 2 ubuntu 结束docker服务
+查看ubuntu日志,cat  /var/log/syslog.1
+发现docker 异常停止记录: Stopped Docker Application Container Engine
+原因: ubuntu 更新导致 docker结束
